@@ -16,7 +16,7 @@ body {
 }
 
 .profilecard{
-  height: 60vh;
+  height: 52vh;
   width: 400px;
   background-color: aquamarine;
   border-radius: 12px;
@@ -53,9 +53,22 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 .bottom{
-  height: 33vh;
+  height: 16vh;
   background-color: inherit;
   width: inherit;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  column-gap: 40px;
+}
+li{
+  list-style-type: none;
+  font-family: Arial, Helvetica, sans-serif;
+}
+ul{
+  text-align: center;
+  padding-inline-start: 0px;
 }
 /* expand content */
 body.expand {
