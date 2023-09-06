@@ -1,6 +1,8 @@
-const expandButton = document.querySelector('header button')
-expandButton.addEventListener('click', expand)
+const flipbutton = document.getElementsByClassName(flip)
+flipbutton.addEventListener('click, showbackcard')
 
-function expand () {
-  document.body.classList.toggle('expand')
+const hiddencontent = document.getElementsByClassName(back-card)
+
+function showbackcard () {
+  hiddencontent.style.display= 'block';
 }

@@ -15,64 +15,127 @@ body {
   color: #10214e;
 }
 
-.profilecard{
-  height: 52vh;
-  width: 30em;
-  min-width: 20em;
-  background-color: aquamarine;
-  border-radius: 12px;
-  box-shadow: #00000026 6px 6px 10px;
+/* main code */
+/* frond-card */
+.card-wrapper{
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 0.8em;
 }
-.top{
-  height: 12vh;
-  width: 100%;
-  background-color: black;
-  border-radius: 12px 12px 0px 0px;
+.frond-card{
+  height: 30em;
+  width: 20em;
+  background-color: red;
+  border-radius: 0.8em ;
+}
+.frond-top{
+  height: 10em;
+  padding: 1em 1em 0em 1em;
+  background-color: rgb(255, 102, 0);
+  border-radius: 0.8em 0.8em 0em 0em;
+ 
+}
+.frond-bottom{
+  border-radius: 0em 0em 0.8em 0.8em;
+}
+.frond-bottom img{
+  width: 20em;
+  
+  border-radius: 0em 0em 0.8em 0.8em;
+}
+.frond-card h1{
+  position: absolute;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 46px;
+  margin-top: 15px;
+  color: white;
+}
+.frond-card .hover-name:hover{
+  cursor: pointer;
+  color: black;
+  transition: ease 0.5s;
+  transform: scale(115%);
+}
+.frond-card .hover-name:active::after{
+ position: absolute;
+ content: "Thomas";
+ background-color: rgb(255, 102, 0);
+ left: 0px;
+ cursor: pointer;
+}
+.flip{
   position: relative;
-  top: 0px;
-}
-.image{
-  width: 100px;
-  height: 100px;
+  float: right;
+  overflow: visible;
+  margin-top: 16px;
+  padding: 9px 10px;
   border-radius: 100%;
-  background-color: rgb(77, 77, 77);
-  position: relative;
-  top: -40px;
+  border: none;
+  background-color:white;
+  color: rgb(255, 102, 0);
+  margin-left: -4em;
+  
 }
-/* Styling voor middel binnen het profilecard element, width inherit voor volledige breedte, postition relative voor juiste positie, top voor de juiste hoogte */
-.middel{
-  height: 5vh;
-  width: 100%;
-  background-color: inherit;
-  position: relative;
-  top: -40px;
+.flip:hover{
+  color: rgb(255, 102, 0);
+  background-color: black;
+  cursor: pointer;
+  transition: ease 0.5s;
+  transform: scale(115%);
 }
-/* Styling voor heading 2 binnen het middel element, text align op de text te centeren, font-family om de family te veranderen */
-.middel h2{
+
+/* back card */
+.back-card{
+  display: none;
+  height: 36.66em;
+  width: 20em;
+  background-color: black;
+  border-radius: 0em 0.8em 0.8em 0em;
+  position: relative;
+  left: -16px;
+  padding: 1em;
+  padding-right: 2em;
+ transition: ease-in 2s;
+}
+.back-top{
+  height: 10em;
+}
+.back-top h2{
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif ;
+  margin-top: 2em;
 }
-.bottom{
-  height: 16vh;
-  background-color: inherit;
-  width: 100%;
+.back-bottom{
+  height: 20em;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: center;
   column-gap: 40px;
 }
-li{
-  list-style-type: none;
-  font-family: Arial, Helvetica, sans-serif;
-}
 ul{
-  text-align: center;
+  list-style-type: none;
+  margin-block-start: 0em;
   padding-inline-start: 0px;
+  row-gap: 20px;
 }
+li{
+  color: white;
+  font-size: 1em;
+  font-family: Arial, Helvetica, sans-serif;
+
+  
+}
+
+
+
+
+.full-wrapper{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
 /* expand content */
 body.expand {
   font-size: 1.15em;
@@ -100,3 +163,5 @@ body.expand dd {
 body.expand img {
   width: 15em;
 }
+/* hover om transition goed te krijgen */
+
