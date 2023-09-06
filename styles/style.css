@@ -23,10 +23,13 @@ body {
   border-radius: 0.8em;
 }
 .frond-card{
-  height: 30em;
+  height: 36.5em;
   width: 20em;
-  background-color: red;
+  /* background-color: red; */
   border-radius: 0.8em ;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
 }
 .frond-top{
   height: 10em;
@@ -49,6 +52,7 @@ body {
   font-size: 46px;
   margin-top: 15px;
   color: white;
+  transition: ease-out;
 }
 .frond-card .hover-name:hover{
   cursor: pointer;
@@ -62,40 +66,48 @@ body {
  background-color: rgb(255, 102, 0);
  left: 0px;
  cursor: pointer;
+ transition-duration: 3s;
 }
 .flip{
-  position: relative;
-  float: right;
-  overflow: visible;
-  margin-top: 16px;
+  position: absolute;
+  margin: 1em;
   padding: 9px 10px;
   border-radius: 100%;
   border: none;
   background-color:white;
   color: rgb(255, 102, 0);
-  margin-left: -4em;
   
 }
 .flip:hover{
   color: rgb(255, 102, 0);
   background-color: black;
   cursor: pointer;
-  transition: ease 0.5s;
+  transition: ease-in-out 0.5s;
   transform: scale(115%);
+}
+.flip:focus::after{
+  content: "◀︎";
+  position: absolute;
+  left: 7px;
+  top: 7px;
+  background-color: white;
+}
+.flip:focus{
+  background-color: white;
 }
 
 /* back card */
 .back-card{
   display: none;
-  height: 36.66em;
+  height: 36.5em;
   width: 20em;
   background-color: black;
   border-radius: 0em 0.8em 0.8em 0em;
-  position: relative;
-  left: -16px;
+  position: absolute;
   padding: 1em;
   padding-right: 2em;
- transition: ease-in 2s;
+  margin-left: -1em;
+  transition: none;
 }
 .back-top{
   height: 10em;
@@ -109,9 +121,9 @@ body {
 .back-bottom{
   height: 20em;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  column-gap: 40px;
+  flex-direction: column;
+  justify-content: flex-start;
+  
 }
 ul{
   list-style-type: none;
@@ -127,13 +139,22 @@ li{
   
 }
 
+.colum{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  column-gap: 40px;
 
+}
 
 
 .full-wrapper{
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  box-shadow: rgba(81, 85, 88, 0.459) 0px 8px 24px;
+  border-radius: 0.8em;
+  background-color: black;
 }
 
 /* expand content */
@@ -160,6 +181,17 @@ body.expand dd {
   font-size: 1.75em;
 }
 
+.colum2{
+  display: flex;
+  flex-direction: row;
+
+}
+.social-icon{
+  padding: 20px;
+  border-radius: 0.2em;
+  border: none;
+  background-color: rgb(255, 102, 0) ;
+}
 body.expand img {
   width: 15em;
 }

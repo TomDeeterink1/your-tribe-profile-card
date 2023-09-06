@@ -11,6 +11,7 @@
     <div class="full-wrapper">
       <div class="card-wrapper">
         <div class="frond-card">
+          <button onclick="showbackcard();" class="flip">▶︎</button>
           <div class="frond-top">
             <h1> <span class="hover-name">Tom</span>  <br> Deeterink</h1>
             
@@ -26,32 +27,36 @@
             <h2>About me</h2>
           </div>
           <div class="back-bottom">
-            <div class="row1">
-              <ul>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-              </ul>
+            <div class="colum">
+              <div class="row1">
+                <ul>
+                  <li>Gamen</li>
+                  <li>Films</li>
+                  <li>Sporten</li>
+                  <li>Fitness</li>
+                  <li>Fietsen</li>
+                  <li>Series</li>
+                </ul>
+              </div>
+              <div class="row2">
+                <ul>
+                  <li>21 jaar</li>
+                  <li>Uitgeest</li>
+                </ul>
+              </div>
             </div>
-            <div class="row2">
-              <ul>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-                <li>Test</li>
-              </ul>
+            <div id="2" class="colum2">
+              <div class="row1">
+                <button class="social-icon"></button>
+                <button class="social-icon"></button>
+                <button class="social-icon"></button>
+              </div>
             </div>
+            
           </div>
         </div>
       </div>
-      <button onclick="showbackcard();" class="flip">▶︎</button>
+      
     </div>
       <script>
          const flipButtons = document.getElementsByClassName('flip');
@@ -74,6 +79,7 @@
               hiddenContents[index].style.display = 'none';
             } else {
               hiddenContents[index].style.display = 'block';
+              hiddenContents[index].style.transition= 'ease-in'
             }
           }
       </script>
