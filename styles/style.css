@@ -156,7 +156,11 @@ li{
   border-radius: 0.8em;
   background-color: black;
 }
-
+.row-1{
+  display: flex;
+  flex-direction: row;
+  column-gap: 1em;
+}
 /* expand content */
 body.expand {
   font-size: 1.15em;
@@ -184,6 +188,7 @@ body.expand dd {
 .colum2{
   display: flex;
   flex-direction: row;
+  justify-content: center;
 
 }
 .social-icon{
@@ -191,6 +196,10 @@ body.expand dd {
   border-radius: 0.2em;
   border: none;
   background-color: rgb(255, 102, 0) ;
+}
+.social-icon:hover{
+  background-color: white;
+  cursor: pointer;
 }
 body.expand img {
   width: 15em;
