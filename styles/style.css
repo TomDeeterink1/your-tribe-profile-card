@@ -205,11 +205,11 @@ body.expand dd {
   justify-content: center;
 }
 .colum3 .row3{
-  max-width: 12.2em;
+  max-width: 12.4em;
 }
 .colum3 .row3 p{
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 12.2em;
+  max-width: 12.4em;
 }
 /* social */
 .social-icon{
@@ -228,8 +228,6 @@ body.expand dd {
   transition: ease-in 0.2s;
   font-size: 1.5em;
   overflow: visible;
-
-  
 }
 .social-icon:focus{
   background-color: white;
@@ -238,8 +236,6 @@ body.expand dd {
   transition: ease-in 0.2s;
   font-size: 1em;
   overflow: visible;
-
-  
 }
 
 
@@ -251,3 +247,31 @@ body.expand img {
 }
 /* hover om transition goed te krijgen */
 
+/* mobile */
+@media only screen and (max-width: 460px){
+
+  .flip{
+    transform: rotate(90deg);
+    padding: 6px 10px;
+  }
+  .flip:focus::after{
+    transform: rotate(90deg);
+    content: "◀︎";
+    position: absolute;
+    top: 5px;
+    left: 7px;
+    
+  }
+  .frond-card{
+    z-index: 1;
+  }
+  .full-wrapper{
+    display: flex;
+    flex-direction: column;
+  }
+  .back-card{
+    margin-left: 0em;
+    border-radius: 0em 0em 0.8em 0.8em;
+    margin-top: -1em;
+  }
+}
