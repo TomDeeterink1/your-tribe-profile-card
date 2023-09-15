@@ -96,7 +96,7 @@ body {
   background-color: white;
 }
 
-/* back card */
+/* back card  met alle styling alles in em zodat waardes responsive blijven*/
 .back-card{
   display: none;
   height: 36.5em;
@@ -245,7 +245,8 @@ body.expand dd {
 body.expand img {
   width: 15em;
 }
-/* hover om transition goed te krijgen */
+
+/* hover om transition goed te krijgen met :focus::after*/
 
 /* mobile */
 @media only screen and (max-width: 460px){
